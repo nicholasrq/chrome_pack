@@ -1,4 +1,4 @@
-#!/Users/nr/.rbenv/shims/ruby
+#!/usr/bin/ruby
 
 class ChromePacker
 
