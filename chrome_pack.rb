@@ -2,10 +2,10 @@
 
 class ChromePacker
 
-	def initialize(params = {:path => Dir.pwd, :package_name => nil, :skip => false})
+	def initialize(params)
 		path = params[:path]
-		package_name = params[:package_name]
-		skip = params[:skip]
+		package_name = params[:name]
+		skip = params[:not_minimize]
 
 		if package_name.nil?
 			puts "Package name must be specified"
@@ -96,4 +96,12 @@ class ChromePacker
 
 end
 
-ChromePacker.new({:path => ARGV[0], :package_name => ARGV[1], :skip => ARGV[2]})
+arguments = { :path => Dir.pwd, :name => nil, :not_minimize => false }
+
+ARGV.each do |val|
+	arg = val.split "="
+	arg_key = arg[0].gsub "--", ""
+	arguments[:"#{arg_key}"] = arg[1]
+end
+
+ChromePacker.new(arguments)
