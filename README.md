@@ -1,7 +1,7 @@
 Chrome Pack
 ===========
 
-Chrome Pack is a little Ruby script whick allows you minifi JS and CSS
+Chrome Pack is a little Ruby script which allows you minify JS and CSS
 in your chrome extension and then build this extension into *.crx file.
 
 ## Preparation
