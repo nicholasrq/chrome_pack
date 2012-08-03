@@ -1,7 +1,7 @@
 Chrome Pack
 ===========
 
-Chrome pach is a little Ruby script whick allows you minifi JS and CSS
+Chrome Pack is a little Ruby script whick allows you minifi JS and CSS
 in your chrome extension and then build this extension into *.crx file.
 
 ## Preparation
@@ -19,8 +19,8 @@ Next, when you were done, you need to configure Chrome Pack
 Open `chrome_pack.rb` and find this rows:
 
 ```ruby
-		@ext_names = [".js", ".css"]
-		@needed_dirs = ["js", "css"]
+@ext_names = [".js", ".css"]
+@needed_dirs = ["js", "css"]
 ```
 
 The `@ext_names` variable consists of file extensions to be minified.
