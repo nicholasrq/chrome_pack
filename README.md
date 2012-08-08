@@ -1,4 +1,4 @@
-Chrome Pack
+Chrome Pack 1.0.1
 ===========
 
 Chrome Pack is a little Ruby script which allows you minify JS and CSS
@@ -46,9 +46,9 @@ alias chromepack="~/chrome_pack.rb"
 ## Usage
 From your terminal run:
 
-```
+```bash
 $ cd ~/Sites/my_extension
-$ chrome_pack --name=my_extension
+$ chrome_pack -n my_extension
 ```
 
 You'll see base parameters (working directory, chrome version, path to extension *.pem key etc.)
@@ -57,14 +57,20 @@ run Google Chrome extensions compiler.
 
 If you want skip minification and just pack your extension set last attribute to true
 
+```bash
+$ chrome_pack -n my_extension -nm true
 ```
-$ chrome_pack --name=my_extension --not_minimize=true
+
+You can specify type of package: `*.crx` or `*.zip`
+
+```bash
+$ chrome_pack -n my_package -t zip
 ```
 
 ## Arguments
 
-* `--path`         - _(string, optional, default: current directory)_ path to extension..
-* `--name`         - _(string, required, default: nil)_ name of extension. needed for choosing right pem file and folder
-* `--not_minimize` - _(boolean, optional, default: false)_ skip minification of js/css
-
+* `-p`  `--path`         - _(string, optional, default: current directory)_ path to extension..
+* `-n`  `--name`         - _(string, required, default: nil)_ name of extension. needed for choosing right pem file and folder
+* `-nm` `--not_minimize` - _(boolean, optional, default: false)_ skip minification of js/css
+* `-t`  `--type`         - _(string, optional, default: "crx")_ type of packed extension
 
